@@ -267,7 +267,8 @@ class TccZoom {
                              zoomLevel :	1,
                              <?php } ?>
                              <?php
-                                     if(strlen(trim($options['zoom_background_color']))>1) { 
+                                     if(isset($options['zoom_background_color'])
+                                        && strlen(trim($options['zoom_background_color']))>1) {
                              ?>
                                      tint:true, 
                                      tintColour:'<?php echo esc_attr($options['zoom_background_color']); ?>', 
@@ -372,7 +373,9 @@ class TccZoom {
 			<?php	
 				break;
 			}
-				if(strlen(trim($options['zoom_background_color']))>1 && $options['zoom_type']=='window' ) { 
+				if(isset($options['zoom_background_color'])
+           && strlen(trim($options['zoom_background_color']))>1
+           && $options['zoom_type']=='window' ) {
 			?>
 				tint:true, 
 				tintColour:'<?php echo esc_attr($options['zoom_background_color']); ?>', 
