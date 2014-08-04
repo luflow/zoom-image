@@ -301,11 +301,7 @@ class TccZoom {
                     $new_link =  $doc->saveHTML();
                 }
             }
-           
-            
-		//global $post;
-		//$src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full', false, '' );
-	
+
 		$options = get_option('zoom_image_options');
 	
 		ob_start();
@@ -335,7 +331,6 @@ class TccZoom {
 	/* end of variations */
 	
     jQuery(document).ready(function($){
-		//jQuery('.woocommerce-main-image img').attr('data-zoom-image','<?php echo $src[0]; ?>'));
 		jQuery('.main-image-add-zoom-image-feature img').attr('data-zoom-image',jQuery('.main-image-add-zoom-image-feature').attr('href'));
         jQuery('.main-image-add-zoom-image-feature img').elevateZoom({
 			<?php if($options['zoom_level']) { ?>
